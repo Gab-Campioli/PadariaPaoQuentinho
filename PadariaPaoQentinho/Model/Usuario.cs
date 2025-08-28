@@ -1,5 +1,7 @@
-﻿using System;
+﻿using MySqlConnector;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,10 +21,10 @@ namespace PadariaPaoQentinho.Model
          * Remover
          */
 
-        public DataTable Listar()
+        public DataTable Logar()
         {
 
-            string comando = "SELECT id, nome, sobrenome, cpf, email FROM clientes";
+            string comando = "SELECT * FROM usuarios WHERE email = @email AND senha = @senha";
             /*
             Caso vá utilizar o WHERE, empregue o uso de caracteres coringas,
             semelhante ao apresentado no metódo Cadastrar() acima.
@@ -30,6 +32,13 @@ namespace PadariaPaoQentinho.Model
             Banco conexaoBD = new Banco();
             MySqlConnection con = conexaoBD.ObterConexao();
             MySqlCommand cmd = new MySqlCommand(comando, con);
+
+            // Obter hash da senha
+            string senhahash = EasyEncryption.SHA.ComputeSHA256Hash(Senha);
+
+            // Substituir os caracteres coringas (@)
+            cmd.Parameters.AddWithValue("@email", Email);
+            cmd.Parameters.AddWithValue("@senha", senhahash); // ainda precisamos obter o hash
 
             cmd.Prepare();
             // Declarar tabela que irá receber o resultado:

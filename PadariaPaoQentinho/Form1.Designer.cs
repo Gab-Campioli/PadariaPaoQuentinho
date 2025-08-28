@@ -31,8 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Acesso));
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblSenha = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txbEmail = new System.Windows.Forms.TextBox();
+            this.txbSenha = new System.Windows.Forms.TextBox();
             this.btnLogar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -56,19 +56,20 @@
             this.lblSenha.TabIndex = 2;
             this.lblSenha.Text = "Senha:";
             // 
-            // textBox1
+            // txbEmail
             // 
-            this.textBox1.Location = new System.Drawing.Point(88, 180);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(149, 20);
-            this.textBox1.TabIndex = 3;
+            this.txbEmail.Location = new System.Drawing.Point(88, 180);
+            this.txbEmail.Name = "txbEmail";
+            this.txbEmail.Size = new System.Drawing.Size(149, 20);
+            this.txbEmail.TabIndex = 3;
             // 
-            // textBox2
+            // txbSenha
             // 
-            this.textBox2.Location = new System.Drawing.Point(88, 220);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(149, 20);
-            this.textBox2.TabIndex = 4;
+            this.txbSenha.Location = new System.Drawing.Point(88, 220);
+            this.txbSenha.Name = "txbSenha";
+            this.txbSenha.PasswordChar = '•';
+            this.txbSenha.Size = new System.Drawing.Size(149, 20);
+            this.txbSenha.TabIndex = 4;
             // 
             // btnLogar
             // 
@@ -78,6 +79,7 @@
             this.btnLogar.TabIndex = 5;
             this.btnLogar.Text = "Logar";
             this.btnLogar.UseVisualStyleBackColor = true;
+            this.btnLogar.Click += new System.EventHandler(this.btnLogar_Click);
             // 
             // pictureBox1
             // 
@@ -96,8 +98,8 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(294, 347);
             this.Controls.Add(this.btnLogar);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txbSenha);
+            this.Controls.Add(this.txbEmail);
             this.Controls.Add(this.lblSenha);
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.pictureBox1);
@@ -116,8 +118,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblSenha;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txbEmail;
+        private System.Windows.Forms.TextBox txbSenha;
         private System.Windows.Forms.Button btnLogar;
     }
 }
