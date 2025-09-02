@@ -36,6 +36,7 @@
             this.lblMenuPrincipal = new System.Windows.Forms.Label();
             this.lblAcessoPessoal = new System.Windows.Forms.Label();
             this.lblEscolher = new System.Windows.Forms.Label();
+            this.lblPessoa = new System.Windows.Forms.Label();
             this.pibComandas = new System.Windows.Forms.PictureBox();
             this.pibCaixa = new System.Windows.Forms.PictureBox();
             this.pibProdutos = new System.Windows.Forms.PictureBox();
@@ -55,7 +56,7 @@
             this.btnProdutos.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnProdutos.Font = new System.Drawing.Font("CityBlueprint", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.btnProdutos.ForeColor = System.Drawing.Color.White;
-            this.btnProdutos.Location = new System.Drawing.Point(261, 180);
+            this.btnProdutos.Location = new System.Drawing.Point(261, 212);
             this.btnProdutos.Name = "btnProdutos";
             this.btnProdutos.Size = new System.Drawing.Size(197, 85);
             this.btnProdutos.TabIndex = 0;
@@ -70,13 +71,14 @@
             this.btnUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnUsuario.Font = new System.Drawing.Font("CityBlueprint", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.btnUsuario.ForeColor = System.Drawing.Color.White;
-            this.btnUsuario.Location = new System.Drawing.Point(64, 180);
+            this.btnUsuario.Location = new System.Drawing.Point(64, 212);
             this.btnUsuario.Name = "btnUsuario";
             this.btnUsuario.Size = new System.Drawing.Size(176, 85);
             this.btnUsuario.TabIndex = 1;
             this.btnUsuario.Text = "Usuário";
             this.btnUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnUsuario.UseVisualStyleBackColor = false;
+            this.btnUsuario.Click += new System.EventHandler(this.btnUsuario_Click);
             // 
             // btnCaixa
             // 
@@ -85,7 +87,7 @@
             this.btnCaixa.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCaixa.Font = new System.Drawing.Font("CityBlueprint", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.btnCaixa.ForeColor = System.Drawing.Color.White;
-            this.btnCaixa.Location = new System.Drawing.Point(64, 271);
+            this.btnCaixa.Location = new System.Drawing.Point(64, 303);
             this.btnCaixa.Name = "btnCaixa";
             this.btnCaixa.Size = new System.Drawing.Size(176, 85);
             this.btnCaixa.TabIndex = 2;
@@ -100,7 +102,7 @@
             this.btnComandas.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnComandas.Font = new System.Drawing.Font("CityBlueprint", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.btnComandas.ForeColor = System.Drawing.Color.White;
-            this.btnComandas.Location = new System.Drawing.Point(261, 271);
+            this.btnComandas.Location = new System.Drawing.Point(261, 303);
             this.btnComandas.Name = "btnComandas";
             this.btnComandas.Size = new System.Drawing.Size(197, 85);
             this.btnComandas.TabIndex = 3;
@@ -135,17 +137,27 @@
             this.lblEscolher.AutoSize = true;
             this.lblEscolher.Font = new System.Drawing.Font("High Tower Text", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEscolher.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(112)))), ((int)(((byte)(90)))));
-            this.lblEscolher.Location = new System.Drawing.Point(63, 139);
+            this.lblEscolher.Location = new System.Drawing.Point(58, 167);
             this.lblEscolher.Name = "lblEscolher";
             this.lblEscolher.Size = new System.Drawing.Size(303, 32);
             this.lblEscolher.TabIndex = 7;
             this.lblEscolher.Text = "O que deseja acessar hoje?";
             // 
+            // lblPessoa
+            // 
+            this.lblPessoa.AutoSize = true;
+            this.lblPessoa.Font = new System.Drawing.Font("High Tower Text", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPessoa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(112)))), ((int)(((byte)(90)))));
+            this.lblPessoa.Location = new System.Drawing.Point(59, 139);
+            this.lblPessoa.Name = "lblPessoa";
+            this.lblPessoa.Size = new System.Drawing.Size(0, 28);
+            this.lblPessoa.TabIndex = 12;
+            // 
             // pibComandas
             // 
             this.pibComandas.BackColor = System.Drawing.Color.Transparent;
             this.pibComandas.Image = global::PadariaPaoQentinho.Properties.Resources.icone_comanda_removebg_preview;
-            this.pibComandas.Location = new System.Drawing.Point(276, 287);
+            this.pibComandas.Location = new System.Drawing.Point(276, 319);
             this.pibComandas.Name = "pibComandas";
             this.pibComandas.Size = new System.Drawing.Size(69, 46);
             this.pibComandas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -156,7 +168,7 @@
             // 
             this.pibCaixa.BackColor = System.Drawing.Color.Transparent;
             this.pibCaixa.Image = global::PadariaPaoQentinho.Properties.Resources.icone_caixa_removebg_preview;
-            this.pibCaixa.Location = new System.Drawing.Point(84, 287);
+            this.pibCaixa.Location = new System.Drawing.Point(84, 319);
             this.pibCaixa.Name = "pibCaixa";
             this.pibCaixa.Size = new System.Drawing.Size(69, 46);
             this.pibCaixa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -167,7 +179,7 @@
             // 
             this.pibProdutos.BackColor = System.Drawing.Color.Transparent;
             this.pibProdutos.Image = global::PadariaPaoQentinho.Properties.Resources.icone_produtos_removebg_preview;
-            this.pibProdutos.Location = new System.Drawing.Point(276, 200);
+            this.pibProdutos.Location = new System.Drawing.Point(276, 232);
             this.pibProdutos.Name = "pibProdutos";
             this.pibProdutos.Size = new System.Drawing.Size(69, 46);
             this.pibProdutos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -178,7 +190,7 @@
             // 
             this.pibUsuarios.BackColor = System.Drawing.Color.Transparent;
             this.pibUsuarios.Image = global::PadariaPaoQentinho.Properties.Resources.icone_usuarios_removebg_preview;
-            this.pibUsuarios.Location = new System.Drawing.Point(84, 200);
+            this.pibUsuarios.Location = new System.Drawing.Point(84, 232);
             this.pibUsuarios.Name = "pibUsuarios";
             this.pibUsuarios.Size = new System.Drawing.Size(69, 46);
             this.pibUsuarios.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -201,6 +213,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(499, 416);
+            this.Controls.Add(this.lblPessoa);
             this.Controls.Add(this.pibComandas);
             this.Controls.Add(this.pibCaixa);
             this.Controls.Add(this.pibProdutos);
@@ -242,5 +255,6 @@
         private System.Windows.Forms.PictureBox pibProdutos;
         private System.Windows.Forms.PictureBox pibCaixa;
         private System.Windows.Forms.PictureBox pibComandas;
+        private System.Windows.Forms.Label lblPessoa;
     }
 }

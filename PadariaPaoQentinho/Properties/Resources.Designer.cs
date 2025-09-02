@@ -63,6 +63,36 @@ namespace PadariaPaoQentinho.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap CadastrarIcon {
+            get {
+                object obj = ResourceManager.GetObject("CadastrarIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap EditarIcon {
+            get {
+                object obj = ResourceManager.GetObject("EditarIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ExcluirIcon {
+            get {
+                object obj = ResourceManager.GetObject("ExcluirIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icone_caixa_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("icone_caixa-removebg-preview", resourceCulture);
@@ -116,6 +146,16 @@ namespace PadariaPaoQentinho.Properties {
         internal static System.Drawing.Bitmap Logo_certo_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("Logo_certo-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MenuIcon_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("MenuIcon-removebg-preview", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -55,7 +55,7 @@ namespace PadariaPaoQentinho
                     usuario.NomeCompleto = resultado.Rows[0]["nome_completo"].ToString();
 
                     // Mudar para o menu principal
-                    MenuPrincipal menuprincipal = new MenuPrincipal();
+                    MenuPrincipal menuprincipal = new MenuPrincipal(usuario);
                     Hide();
                     menuprincipal.ShowDialog();
 

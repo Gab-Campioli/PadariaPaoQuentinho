@@ -12,11 +12,19 @@ namespace PadariaPaoQentinho
 {
     public partial class MenuPrincipal : Form
     {
-        public MenuPrincipal()
+        Model.Usuario usuario = new Model.Usuario();
+
+        public MenuPrincipal(Model.Usuario usuario)
         {
             InitializeComponent();
+            this.usuario = usuario;
+            lblPessoa.Text = usuario.NomeCompleto;
         }
 
-       
+        private void btnUsuario_Click(object sender, EventArgs e)
+        {
+            FormUsuario formUsuario = new FormUsuario(usuario);
+            formUsuario.ShowDialog(); // mostrar o form
+        }
     }
 }

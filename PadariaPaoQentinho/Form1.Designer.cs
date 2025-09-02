@@ -41,7 +41,7 @@
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(46, 187);
+            this.lblEmail.Location = new System.Drawing.Point(62, 198);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(35, 13);
             this.lblEmail.TabIndex = 1;
@@ -50,7 +50,7 @@
             // lblSenha
             // 
             this.lblSenha.AutoSize = true;
-            this.lblSenha.Location = new System.Drawing.Point(40, 227);
+            this.lblSenha.Location = new System.Drawing.Point(56, 238);
             this.lblSenha.Name = "lblSenha";
             this.lblSenha.Size = new System.Drawing.Size(41, 13);
             this.lblSenha.TabIndex = 2;
@@ -58,14 +58,14 @@
             // 
             // txbEmail
             // 
-            this.txbEmail.Location = new System.Drawing.Point(88, 180);
+            this.txbEmail.Location = new System.Drawing.Point(104, 191);
             this.txbEmail.Name = "txbEmail";
             this.txbEmail.Size = new System.Drawing.Size(149, 20);
             this.txbEmail.TabIndex = 3;
             // 
             // txbSenha
             // 
-            this.txbSenha.Location = new System.Drawing.Point(88, 220);
+            this.txbSenha.Location = new System.Drawing.Point(104, 231);
             this.txbSenha.Name = "txbSenha";
             this.txbSenha.PasswordChar = '•';
             this.txbSenha.Size = new System.Drawing.Size(149, 20);
@@ -73,9 +73,9 @@
             // 
             // btnLogar
             // 
-            this.btnLogar.Location = new System.Drawing.Point(68, 267);
+            this.btnLogar.Location = new System.Drawing.Point(68, 279);
             this.btnLogar.Name = "btnLogar";
-            this.btnLogar.Size = new System.Drawing.Size(169, 49);
+            this.btnLogar.Size = new System.Drawing.Size(203, 69);
             this.btnLogar.TabIndex = 5;
             this.btnLogar.Text = "Logar";
             this.btnLogar.UseVisualStyleBackColor = true;
@@ -84,7 +84,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::PadariaPaoQentinho.Properties.Resources.Logo_certo;
-            this.pictureBox1.Location = new System.Drawing.Point(68, 27);
+            this.pictureBox1.Location = new System.Drawing.Point(104, 37);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(149, 134);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -96,7 +96,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(294, 347);
+            this.ClientSize = new System.Drawing.Size(333, 409);
             this.Controls.Add(this.btnLogar);
             this.Controls.Add(this.txbSenha);
             this.Controls.Add(this.txbEmail);
