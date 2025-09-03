@@ -104,5 +104,78 @@ namespace PadariaPaoQentinho.Model
                 return false;
             }
         }
+
+        public bool Apagar()
+        {
+            string comando = "DELETE FROM usuarios WHERE id = @id";
+
+            Banco conexaoBD = new Banco();
+            MySqlConnection con = conexaoBD.ObterConexao();
+            MySqlCommand cmd = new MySqlCommand(comando, con);
+
+            cmd.Parameters.AddWithValue("@id", id);
+
+            cmd.Prepare();
+    
+            try
+            {
+                if (cmd.ExecuteNonQuery() == 0)
+                {
+                    conexaoBD.Desconectar(con);
+                    return false;
+                }
+                else
+                {
+                    conexaoBD.Desconectar(con);
+                    return true;
+                }
+            }
+            catch
+            {
+                conexaoBD.Desconectar(con);
+                return false;
+            }
+
+        }
+
+        public bool Editar()
+        {
+            string comando = "UPDATE usuarios SET nome_completo = @nome_completo, email = @email, senha = @senha WHERE id = @id";
+
+            Banco conexaoBD = new Banco();
+            MySqlConnection con = conexaoBD.ObterConexao();
+            MySqlCommand cmd = new MySqlCommand(comando, con);
+
+            cmd.Parameters.AddWithValue("@nome_completo", NomeCompleto);
+
+            string hashsenha = EasyEncryption.SHA.ComputeSHA256Hash(Senha);
+            cmd.Parameters.AddWithValue("@senha", hashsenha);
+
+            cmd.Parameters.AddWithValue("@email", Email);
+            cmd.Parameters.AddWithValue("@id", id);
+
+
+            cmd.Prepare();
+
+            try
+            {
+                if (cmd.ExecuteNonQuery() == 0)
+                {
+                    conexaoBD.Desconectar(con);
+                    return false;
+                }
+                else
+                {
+                    conexaoBD.Desconectar(con);
+                    return true;
+                }
+            }
+            catch
+            {
+                conexaoBD.Desconectar(con);
+                return false;
+            }
+
+        }
     }
 }
