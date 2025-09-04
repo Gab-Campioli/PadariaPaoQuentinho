@@ -63,6 +63,7 @@
             this.btnProdutos.Text = "Produtos";
             this.btnProdutos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnProdutos.UseVisualStyleBackColor = false;
+            this.btnProdutos.Click += new System.EventHandler(this.btnProdutos_Click);
             // 
             // btnUsuario
             // 
@@ -94,6 +95,7 @@
             this.btnCaixa.Text = "Caixa";
             this.btnCaixa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCaixa.UseVisualStyleBackColor = false;
+            this.btnCaixa.Click += new System.EventHandler(this.btnCaixa_Click);
             // 
             // btnComandas
             // 
@@ -109,6 +111,7 @@
             this.btnComandas.Text = "Comandas";
             this.btnComandas.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnComandas.UseVisualStyleBackColor = false;
+            this.btnComandas.Click += new System.EventHandler(this.btnComandas_Click);
             // 
             // lblMenuPrincipal
             // 

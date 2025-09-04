@@ -124,13 +124,18 @@
             // 
             // btnCadastrar
             // 
-            this.btnCadastrar.ForeColor = System.Drawing.Color.Black;
+            this.btnCadastrar.BackColor = System.Drawing.Color.White;
+            this.btnCadastrar.FlatAppearance.BorderColor = System.Drawing.Color.SeaGreen;
+            this.btnCadastrar.FlatAppearance.BorderSize = 2;
+            this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrar.ForeColor = System.Drawing.Color.SeaGreen;
             this.btnCadastrar.Location = new System.Drawing.Point(10, 115);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(239, 44);
             this.btnCadastrar.TabIndex = 3;
             this.btnCadastrar.Text = "Cadastrar";
-            this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.UseVisualStyleBackColor = false;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // lblSenhaCadastro
@@ -202,13 +207,17 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.ForeColor = System.Drawing.Color.Black;
-            this.btnEditar.Location = new System.Drawing.Point(6, 113);
+            this.btnEditar.BackColor = System.Drawing.Color.White;
+            this.btnEditar.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditar.ForeColor = System.Drawing.Color.SteelBlue;
+            this.btnEditar.Location = new System.Drawing.Point(10, 113);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(239, 44);
             this.btnEditar.TabIndex = 3;
             this.btnEditar.Text = "Editar";
-            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.UseVisualStyleBackColor = false;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // label1
@@ -261,6 +270,7 @@
             this.btnApagar.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
             this.btnApagar.FlatAppearance.BorderSize = 2;
             this.btnApagar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnApagar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnApagar.ForeColor = System.Drawing.Color.DarkRed;
             this.btnApagar.Location = new System.Drawing.Point(10, 62);
             this.btnApagar.Name = "btnApagar";
