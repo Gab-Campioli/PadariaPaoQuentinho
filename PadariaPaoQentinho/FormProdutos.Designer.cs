@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormProdutos));
             this.dgvProdutos = new System.Windows.Forms.DataGridView();
             this.grbCadastrar = new System.Windows.Forms.GroupBox();
             this.btnCadastrar = new System.Windows.Forms.Button();
@@ -41,11 +42,11 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.cmbCategoriaEditar = new System.Windows.Forms.ComboBox();
             this.lblCategoriaEditar = new System.Windows.Forms.Label();
-            this.txbPreçoEditar = new System.Windows.Forms.TextBox();
+            this.txbPrecoEditar = new System.Windows.Forms.TextBox();
             this.lblPreçoEditar = new System.Windows.Forms.Label();
             this.txbNomeEditar = new System.Windows.Forms.TextBox();
             this.lblNomeEditar = new System.Windows.Forms.Label();
-            this.grbApagarUsuario = new System.Windows.Forms.GroupBox();
+            this.grbApagarProduto = new System.Windows.Forms.GroupBox();
             this.btnApagar = new System.Windows.Forms.Button();
             this.lblSelecioneApagar = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -53,17 +54,25 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).BeginInit();
             this.grbCadastrar.SuspendLayout();
             this.grbEditar.SuspendLayout();
-            this.grbApagarUsuario.SuspendLayout();
+            this.grbApagarProduto.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvProdutos
             // 
+            this.dgvProdutos.AllowUserToAddRows = false;
+            this.dgvProdutos.AllowUserToDeleteRows = false;
+            this.dgvProdutos.AllowUserToResizeColumns = false;
+            this.dgvProdutos.AllowUserToResizeRows = false;
+            this.dgvProdutos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvProdutos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(112)))), ((int)(((byte)(93)))));
             this.dgvProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProdutos.GridColor = System.Drawing.Color.White;
             this.dgvProdutos.Location = new System.Drawing.Point(12, 117);
             this.dgvProdutos.Name = "dgvProdutos";
             this.dgvProdutos.Size = new System.Drawing.Size(703, 249);
             this.dgvProdutos.TabIndex = 0;
+            this.dgvProdutos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProdutos_CellClick);
             // 
             // grbCadastrar
             // 
@@ -97,6 +106,7 @@
             this.btnCadastrar.TabIndex = 6;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = false;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // cmbCategoriaCadastro
             // 
@@ -154,10 +164,11 @@
             this.grbEditar.Controls.Add(this.btnEditar);
             this.grbEditar.Controls.Add(this.cmbCategoriaEditar);
             this.grbEditar.Controls.Add(this.lblCategoriaEditar);
-            this.grbEditar.Controls.Add(this.txbPreçoEditar);
+            this.grbEditar.Controls.Add(this.txbPrecoEditar);
             this.grbEditar.Controls.Add(this.lblPreçoEditar);
             this.grbEditar.Controls.Add(this.txbNomeEditar);
             this.grbEditar.Controls.Add(this.lblNomeEditar);
+            this.grbEditar.Enabled = false;
             this.grbEditar.ForeColor = System.Drawing.Color.White;
             this.grbEditar.Location = new System.Drawing.Point(228, 388);
             this.grbEditar.Name = "grbEditar";
@@ -180,6 +191,7 @@
             this.btnEditar.TabIndex = 6;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // cmbCategoriaEditar
             // 
@@ -199,12 +211,12 @@
             this.lblCategoriaEditar.TabIndex = 4;
             this.lblCategoriaEditar.Text = "Categoria:";
             // 
-            // txbPreçoEditar
+            // txbPrecoEditar
             // 
-            this.txbPreçoEditar.Location = new System.Drawing.Point(49, 55);
-            this.txbPreçoEditar.Name = "txbPreçoEditar";
-            this.txbPreçoEditar.Size = new System.Drawing.Size(128, 20);
-            this.txbPreçoEditar.TabIndex = 3;
+            this.txbPrecoEditar.Location = new System.Drawing.Point(49, 55);
+            this.txbPrecoEditar.Name = "txbPrecoEditar";
+            this.txbPrecoEditar.Size = new System.Drawing.Size(128, 20);
+            this.txbPrecoEditar.TabIndex = 3;
             // 
             // lblPreçoEditar
             // 
@@ -231,19 +243,19 @@
             this.lblNomeEditar.TabIndex = 0;
             this.lblNomeEditar.Text = "Nome:";
             // 
-            // grbApagarUsuario
+            // grbApagarProduto
             // 
-            this.grbApagarUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(112)))), ((int)(((byte)(90)))));
-            this.grbApagarUsuario.Controls.Add(this.btnApagar);
-            this.grbApagarUsuario.Controls.Add(this.lblSelecioneApagar);
-            this.grbApagarUsuario.Enabled = false;
-            this.grbApagarUsuario.ForeColor = System.Drawing.Color.White;
-            this.grbApagarUsuario.Location = new System.Drawing.Point(453, 450);
-            this.grbApagarUsuario.Name = "grbApagarUsuario";
-            this.grbApagarUsuario.Size = new System.Drawing.Size(262, 100);
-            this.grbApagarUsuario.TabIndex = 9;
-            this.grbApagarUsuario.TabStop = false;
-            this.grbApagarUsuario.Text = "Apagar";
+            this.grbApagarProduto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(112)))), ((int)(((byte)(90)))));
+            this.grbApagarProduto.Controls.Add(this.btnApagar);
+            this.grbApagarProduto.Controls.Add(this.lblSelecioneApagar);
+            this.grbApagarProduto.Enabled = false;
+            this.grbApagarProduto.ForeColor = System.Drawing.Color.White;
+            this.grbApagarProduto.Location = new System.Drawing.Point(453, 450);
+            this.grbApagarProduto.Name = "grbApagarProduto";
+            this.grbApagarProduto.Size = new System.Drawing.Size(262, 100);
+            this.grbApagarProduto.TabIndex = 9;
+            this.grbApagarProduto.TabStop = false;
+            this.grbApagarProduto.Text = "Apagar";
             // 
             // btnApagar
             // 
@@ -259,6 +271,7 @@
             this.btnApagar.TabIndex = 7;
             this.btnApagar.Text = "Apagar";
             this.btnApagar.UseVisualStyleBackColor = false;
+            this.btnApagar.Click += new System.EventHandler(this.btnApagar_Click);
             // 
             // lblSelecioneApagar
             // 
@@ -298,19 +311,20 @@
             this.ClientSize = new System.Drawing.Size(734, 573);
             this.Controls.Add(this.lblProdutosTitulo);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.grbApagarUsuario);
+            this.Controls.Add(this.grbApagarProduto);
             this.Controls.Add(this.grbEditar);
             this.Controls.Add(this.grbCadastrar);
             this.Controls.Add(this.dgvProdutos);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormProdutos";
-            this.Text = "FormProdutos";
+            this.Text = "Produtos";
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).EndInit();
             this.grbCadastrar.ResumeLayout(false);
             this.grbCadastrar.PerformLayout();
             this.grbEditar.ResumeLayout(false);
             this.grbEditar.PerformLayout();
-            this.grbApagarUsuario.ResumeLayout(false);
-            this.grbApagarUsuario.PerformLayout();
+            this.grbApagarProduto.ResumeLayout(false);
+            this.grbApagarProduto.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -332,11 +346,11 @@
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.ComboBox cmbCategoriaEditar;
         private System.Windows.Forms.Label lblCategoriaEditar;
-        private System.Windows.Forms.TextBox txbPreçoEditar;
+        private System.Windows.Forms.TextBox txbPrecoEditar;
         private System.Windows.Forms.Label lblPreçoEditar;
         private System.Windows.Forms.TextBox txbNomeEditar;
         private System.Windows.Forms.Label lblNomeEditar;
-        private System.Windows.Forms.GroupBox grbApagarUsuario;
+        private System.Windows.Forms.GroupBox grbApagarProduto;
         private System.Windows.Forms.Button btnApagar;
         private System.Windows.Forms.Label lblSelecioneApagar;
         private System.Windows.Forms.PictureBox pictureBox1;
